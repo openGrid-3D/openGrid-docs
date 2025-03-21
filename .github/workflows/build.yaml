@@ -1,0 +1,79 @@
+name: Release Builds
+
+on:
+  release:
+    types: [published]
+
+permissions: {}
+
+jobs:
+  build:
+    permissions:
+      contents: write # for release creation (svenstaro/upload-release-action)
+
+    if: "!github.event.release.prerelease"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Extract Tag
+        run: echo "PACKAGE_VERSION=${{ github.ref }}" >> $GITHUB_ENV
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.3
+          extensions: opcache, gd
+          tools: composer:v2
+          coverage: none
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GLOBAL_TOKEN }}
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get -y update -qq  < /dev/null > /dev/null
+          sudo apt-get -y install -qq git zip < /dev/null > /dev/null
+
+      - name: Retrieval of Builder Scripts
+        run: |
+          # Real Grav URL
+          curl --silent -H "Authorization: token ${{ secrets.GLOBAL_TOKEN }}" -H "Accept: application/vnd.github.v3.raw" ${{ secrets.BUILD_SCRIPT_URL }} --output build-grav.sh
+
+          # Development Local URL
+          # curl ${{ secrets.BUILD_SCRIPT_URL }} --output build-grav.sh
+
+      - name: Grav Builder
+        run: |
+          bash ./build-grav.sh
+
+      - name: Upload packages to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ env.PACKAGE_VERSION }}
+          file: ./grav-dist/*.zip
+          overwrite: true
+          file_glob: true
+
+  slack:
+    permissions:
+      actions: read # to list jobs for workflow run (technote-space/workflow-conclusion-action)
+
+    name: Slack
+    needs: build
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - uses: technote-space/workflow-conclusion-action@v2
+      - uses: 8398a7/action-slack@v3
+        with:
+          status: failure
+          fields: repo,message,author,action
+          icon_emoji: ':octocat:'
+          author_name: 'Github Action Build'
+          text: '🚚 Automated Build Failure'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GLOBAL_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: env.WORKFLOW_CONCLUSION == 'failure'

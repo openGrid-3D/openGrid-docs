@@ -1,0 +1,93 @@
+---
+GRAV:
+  FRONTMATTER_ERROR_PAGE: "---\nالعنوان: %1$s\n---\n# خطأ: مادة أمامية غير صحيحة\n\nمسار: '%2$s'\n\n**%3$s**\n\n, , ,\n\n%4$s\n, , ,"
+  INFLECTOR_UNCOUNTABLE:
+    - 'معدّات'
+    - 'معلومات'
+    - 'أرز'
+    - 'مال'
+    - 'نوع'
+    - 'سلسلة'
+    - 'سمك'
+    - 'خروف'
+  INFLECTOR_IRREGULAR:
+    'person': 'أشخاص'
+  NICETIME:
+    NO_DATE_PROVIDED: لم يتم تقديم التاريخ
+    BAD_DATE: تاريخ خاطئ
+    AGO: من قبل
+    FROM_NOW: من الآن
+    SECOND: ثانية
+    MINUTE: دقيقة
+    HOUR: ساعة
+    DAY: يوم
+    WEEK: أسبوع
+    MONTH: شهر
+    YEAR: سنة
+    DECADE: عقد
+    SEC: ثانية
+    MIN: دقيقة
+    HR: ساعة
+    WK: أسبوع
+    MO: شهر
+    YR: سنة
+    DEC: عقد
+    SECOND_PLURAL: ثواني
+    MINUTE_PLURAL: '‮دقائق'
+    HOUR_PLURAL: ساعات
+    DAY_PLURAL: أيام
+    WEEK_PLURAL: أسابيع
+    MONTH_PLURAL: أشهر
+    YEAR_PLURAL: سنوات
+    DECADE_PLURAL: عقود
+    SEC_PLURAL: ثواني
+    MIN_PLURAL: دقائق
+    HR_PLURAL: ساعات
+    WK_PLURAL: أسابيع
+    MO_PLURAL: أشهر
+    YR_PLURAL: سنوات
+    DEC_PLURAL: عقود
+  FORM:
+    VALIDATION_FAIL: '<b>فشل التحقق من صحة:</b>'
+    INVALID_INPUT: 'إدخال غير صحيح في'
+    MISSING_REQUIRED_FIELD: 'حقل مطلوب مفقود:'
+    XSS_ISSUES: "مشاكل XSS محتملة تم اكتشافها في حقل '%s' '"
+  MONTHS_OF_THE_YEAR:
+    - 'كانون الثاني'
+    - 'شباط'
+    - 'آذار/ مارس'
+    - 'نيسان'
+    - 'أيار'
+    - 'حزيران'
+    - 'تموز'
+    - 'آب'
+    - 'أيلول'
+    - 'تشرين الأول'
+    - 'تشرين الثاني'
+    - 'كانون الأول'
+  DAYS_OF_THE_WEEK:
+    - 'الاثنين'
+    - 'الثلاثاء'
+    - 'الأربعاء'
+    - 'الخميس'
+    - 'الجمعة'
+    - 'السبت'
+    - 'الأحد'
+  YES: "نعم"
+  NO: "لا"
+  CRON:
+    EVERY: كل
+    EVERY_HOUR: كل ساعة
+    EVERY_MINUTE: كل دقيقة
+    EVERY_DAY_OF_WEEK: كل يوم في الأسبوع
+    EVERY_DAY_OF_MONTH: كل يوم في الشهر
+    EVERY_MONTH: ' كل شهر'
+    TEXT_PERIOD: كل <b />
+    TEXT_MINS: ' في <b /> دقيقة(دقائق) بعد الساعة'
+    TEXT_TIME: ' في <b />:<b />'
+    TEXT_DOW: ' في <b />'
+    TEXT_MONTH: ' من <b />'
+    TEXT_DOM: ' في <b />'
+    ERROR1: الوسم %s غير مدعوم!
+    ERROR2: عدد عناصر غير صالح.
+    ERROR4: تعبير غير معروف

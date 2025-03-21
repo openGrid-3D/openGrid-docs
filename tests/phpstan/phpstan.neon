@@ -1,0 +1,175 @@
+#phpVersion: 70300
+includes:
+    #- '../../vendor/phpstan/phpstan-strict-rules/rules.neon'
+    - '../../vendor/phpstan/phpstan-deprecation-rules/rules.neon'
+    - 'extension.neon'
+parameters:
+    fileExtensions:
+        - php
+        - dist
+    bootstrapFiles:
+        - phpstan-bootstrap.php
+    excludePaths:
+        - */system/src/Grav/Common/Errors/Resources/layout.html.php
+        - */system/src/Twig/DeferredExtension/DeferredNodeVisitorCompat.php    # Twig 1
+        - */system/src/Twig/DeferredExtension/DeferredNodeVisitor.php          # Twig 2+3
+        # Ignore vendor dev dependencies and tests
+        - */vendor/*/*/tests
+        - */vendor/behat
+        - */vendor/codeception
+        - */vendor/phpstan
+        - */vendor/phpunit
+        - */vendor/phpspec
+        - */vendor/phpdocumentor
+        - */vendor/sebastian
+        - */vendor/theseer
+        - */vendor/webmozart
+
+    inferPrivatePropertyTypeFromConstructor: true
+    reportUnmatchedIgnoredErrors: false
+    treatPhpDocTypesAsCertain: false
+
+    # These checks are new in phpstan 1, ignore them for now.
+    checkMissingIterableValueType: false
+    #checkGenericClassInNonGenericObjectType: false
+
+    universalObjectCratesClasses:
+        - Grav\Common\Config\Config
+        - Grav\Common\Config\Languages
+        - Grav\Common\Config\Setup
+        - Grav\Common\Data\Data
+        - Grav\Common\GPM\Common\Package
+        - Grav\Common\GPM\Local\Package
+        - Grav\Common\GPM\Remote\Package
+        - Grav\Common\Page\Header
+        - Grav\Common\Session
+    dynamicConstantNames:
+        - GRAV_CLI
+    ignoreErrors:
+        # New in phpstan 1, ignore them for now.
+        - '#Unsafe usage of new static\(\)#'
+
+        # TODO: Errors that needs some more thinking (bad design?)
+        - '#Access to an undefined property RocketTheme\\Toolbox\\Event\\Event::#'
+        - '#Instantiation of deprecated class RocketTheme\\Toolbox\\Event\\Event#'
+        - '#extends deprecated class RocketTheme\\Toolbox\\Event\\Event#'
+        - '#Access to an undefined property Grav\\Common\\Data\\Blueprint::#'
+        -
+            message: '#Cannot call method path\(\) on string#'
+            path: '*/system/src/Grav/Common/Page/Media.php'
+
+        # TODO: system.twig.umask_fix will not work with Twig 2 anymore
+        -
+            message: '#Call to deprecated method writeCacheFile\(\) of class Twig\\Environment#'
+            path: '*/system/src/Grav/Common/Twig/WriteCacheFileTrait.php'
+
+        # PSR-16 Exception interfaces do not extend \Throwable
+        - '#PHPDoc tag \@throws with type Psr\\SimpleCache\\(CacheException|InvalidArgumentException) is not subtype of Throwable#'
+
+        # Medium __call() methods
+        - '#Call to an undefined method Grav\\Common\\Page\\Medium\\(\w*)Medium::#'
+
+        # These errors are about plugins (need to find a better solution)
+        -
+            message: '#Call to static method sendEmail\(\) on an unknown class Grav\\Plugin\\Email\\Utils#'
+            path: '*/system/src/Grav/Common/Scheduler/Job.php'
+        -
+            message: '#unknown class Grav\\Plugin\\Admin#'
+            path: '*/system/src/Grav/Common/Page/Pages.php'
+        -
+            message: '#unknown class Grav\\Plugin\\Admin#'
+            path: '*/system/src/Grav/Common/Flex/Pages/PageObject.php'
+        -
+            message: '#unknown class Grav\\Plugin\\Admin\\Admin#'
+            path: '*/system/src/Grav/Common/Flex/Types/Pages/PageObject.php'
+        -
+            message: '#unknown class Grav\\Plugin\\Form\\Forms#'
+            path: '*/system/src/Grav/Common/Processors/PagesProcessor.php'
+
+        # Clockwork does not define functions for __call() call
+        -
+            message: '#Call to an undefined method Clockwork\\Clockwork::(info|userData|addEvent|alert)\(\)#'
+            path: '*/system/src/Grav/Common/Debugger.php'
+
+        # These errors can be ignored (they depend on installed extensions)
+        -
+            message: '#Instantiated class (Memcache|Memcached|Redis|RedisException) not found#'
+            path: '*/system/src/Grav/Common/Cache.php'
+        -
+            message: '#unknown class (Memcache|Memcached|Redis|RedisException)#'
+            path: '*/system/src/Grav/Common/Cache.php'
+        -
+            message: '#unknown class Collator#'
+            path: '*/system/src/Grav/Common/Page/Pages.php'
+        -
+            message: '#unknown class Collator#'
+            path: '*/system/src/Grav/Common/Flex/Types/Pages/PageCollection.php'
+        -
+            message: '#Ternary operator condition is always true#'
+            path: '*/system/src/Grav/Framework/Cache/AbstractCache.php'
+        -
+            message: '#Call to function is_object\(\) with int will always evaluate to false#'
+            path: '*/system/src/Grav/Framework/Cache/AbstractCache.php'
+
+        # XHprof
+        - '#tideways_xhprof_enable#'
+
+        # Support for deprecated features
+        -
+            message: '#Instantiation of deprecated class Doctrine\\Common\\Cache\\(\w+)Cache#'
+            path: '*/system/src/Grav/Common/Cache.php'
+        -
+            message: '#Instantiation of deprecated class Doctrine\\Common\\Cache\\(\w+)Cache#'
+            path: '*/system/src/Grav/Common/GPM/Remote/*.php'
+        -
+            message: '#Call to deprecated method order#'
+            path: '*/system/src/Grav/Common/Page/Pages.php'
+        -
+            message: '#Fetching class constant class of deprecated class Grav\\Common\\User\\User#'
+            path: '*/system/src/Grav/Common/Service/AccountsServiceProvider.php'
+        -
+            message: '#Call to deprecated method getLegacyFiles\(\)#'
+            path: '*/system/src/Grav/Common/Session.php'
+        -
+            message: '#Call to deprecated method \w+\(\) of class Grav\\Common\\Flex\\Types\\Users\\UserObject#'
+            path: '*/system/src/Grav/Common/Flex/Types/Users/UserObject.php'
+        -
+            message: '#Call to deprecated method \w+\(\) of class Grav\\Framework\\Flex\\FlexObject#'
+            path: '*/system/src/Grav/Framework/Flex/FlexObject.php'
+        -
+            message: '#Call to deprecated method \w+\(\) of class Grav\\Framework\\Flex\\FlexIndex#'
+            path: '*/system/src/Grav/Framework/Flex/FlexIndex.php'
+        -
+            message: '#Call to deprecated method \w+\(\) of class Grav\\Framework\\Flex\\FlexCollection#'
+            path: '*/system/src/Grav/Framework/Flex/FlexCollection.php'
+        -
+            message: '#Call to deprecated method (getAuthorizeScope|getActiveUser)\(\) of class Grav\\Framework\\Flex\\FlexObject#'
+            path: '*/system/src/Grav/Framework/Flex/Pages/Traits/PageAuthorsTrait.php'
+        -
+            message: '#deprecated class#'
+            path: '*/system/src/Grav/Framework/Uri/Uri.php'
+        -
+            message: '#Method Symfony\\Contracts\\EventDispatcher\\EventDispatcherInterface::dispatch#'
+            path: '*/system/src/Grav/Common/Grav.php'
+
+        - '#has typehint with deprecated class RocketTheme\\Toolbox\\Event\\Event#'
+        - '#Call to deprecated method stopPropagation\(\) of class Symfony\\Component\\EventDispatcher\\Event#'
+        - '#Parameter \#2 \$listener of method Symfony\\Component\\EventDispatcher\\EventDispatcher::addListener\(\)#'
+        - '#Parameter \#2 \$listener of method Symfony\\Component\\EventDispatcher\\EventDispatcher::removeListener\(\)#'
+        - '#Class Grav\\Common\\GPM\\Response not found#'
+
+        # Installer updates
+        -
+            message: '#Variable \$this in PHPDoc tag @var does not exist#'
+            path: '*/system/src/Grav/Installer/updates/*'
+        -
+            message: '#YamlUpdater::isInlineComment\(\) is unused#'
+            path: '*/system/src/Grav/Installer/YamlUpdater.php'
+
+        # Twig Deferred extension compatibility
+        -
+            message: '#typehint with deprecated interface#'
+            path: '*/system/src/Twig/DeferredExtension/DeferredNodeVisitorCompat.php'
+        -
+            message: '#Function twig_array_filter not found#'
+            path: '*/system/src/Grav/Common/Twig/Extension/GravExtension.php'

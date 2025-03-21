@@ -1,0 +1,43 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * @copyright  Copyright (c) 2015 - 2024 Trilby Media, LLC. All rights reserved.
+ * @license    MIT License; see LICENSE file for details.
+ */
+
+use Grav\Common\Composer;
+use Grav\Common\Grav;
+use Grav\Console\Application\PluginApplication;
+
+\define('GRAV_CLI', true);
+\define('GRAV_REQUEST_TIME', microtime(true));
+
+if (!file_exists(__DIR__ . '/../vendor/autoload.php')){
+    // Before we can even start, we need to run composer first
+    require_once __DIR__ . '/../system/src/Grav/Common/Composer.php';
+
+    $composer = Composer::getComposerExecutor();
+    echo "Preparing to install vendor dependencies...\n\n";
+    echo system($composer.' --working-dir="'.__DIR__.'/../" --no-interaction --no-dev --prefer-dist -o install');
+    echo "\n\n";
+}
+
+$autoload = require __DIR__ . '/../vendor/autoload.php';
+
+// Set timezone to default, falls back to system if php.ini not set
+date_default_timezone_set(@date_default_timezone_get());
+
+// Set internal encoding.
+@ini_set('default_charset', 'UTF-8');
+mb_internal_encoding('UTF-8');
+
+if (!file_exists(GRAV_ROOT . '/index.php')) {
+    exit('FATAL: Must be run from ROOT directory of Grav!');
+}
+
+// Bootstrap Grav container.
+$grav = Grav::instance(array('loader' => $autoload));
+
+$app = new PluginApplication('Grav Plugins Commands', GRAV_VERSION);
+$app->run();
