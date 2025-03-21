@@ -1,0 +1,14 @@
+def "nur install" [] {
+  composer install
+  php bin/gpm install
+}
+
+def "nur update" [] {
+  composer install
+  php bin/gpm self-upgrade
+  php bin/gpm update
+}
+
+def "nur run" [] {
+  php -d "error_reporting=E_ALL&~E_NOTICE&~E_DEPRECATED" -S 0.0.0.0:8000 system/router.php
+}

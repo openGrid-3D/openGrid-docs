@@ -1,7 +1,5 @@
-title: Grav
+title: openGrid docs
 author:
-  name: Joe Bloggs
-  email: 'joe@example.com'
+  name: David D
 metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-
+    description: 'Documentation for the openGrid 3D printable wall/desk mounting frameowrk/ecosystem'
