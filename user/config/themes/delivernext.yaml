@@ -1,0 +1,48 @@
+enabled: true
+dropdown:
+  enabled: true
+sticky_menu:
+  enabled: true
+production-mode: false
+custom_css: '0'
+custom_js: '0'
+social_enabled: true
+social:
+  -
+    name: YouTube
+    url: 'https://www.youtube.com/@2D3D-DavidD'
+    target: _blank
+    icon: 'fa fa-youtube'
+  -
+    name: Printables
+    url: 'https://www.printables.com/@DavidD'
+    target: _blank
+    icon: 'fa fa-beer'
+  -
+    name: Makerworld
+    url: 'https://makerworld.com/en/@david.d'
+    target: _blank
+    icon: 'fa fa-glass'
+footer:
+  copyright_text: 'Copyright 2024 David D. All rights reserved.'
+  contact_section_label: Contact
+  quick_links_label: 'Quick Links'
+  about:
+    description: "openGrid wall/desk mounting frameowrk/ecosystem"
+  quick_links_items:
+    -
+      text: Home
+      url: home
+      target: _self
+    -
+      text: Use cases
+      url: use-cases
+      target: _self
+custommenus:
+  enabled: false
+theme_logo_enabled: true
+type_logo_header: text
+theme_logo: {  }
+theme_logo_mobile: {  }
+back_to_top_button:
+  enabled: false

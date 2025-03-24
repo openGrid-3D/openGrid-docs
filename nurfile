@@ -12,3 +12,13 @@ def "nur update" [] {
 def "nur run" [] {
   php -d "error_reporting=E_ALL&~E_NOTICE&~E_DEPRECATED" -S 0.0.0.0:8000 system/router.php
 }
+
+def --wrapped "nur gpm" [
+    ...args,
+] {
+  php bin/gpm update ...$args
+}
+
+def "nur createadmin" [] {
+  php bin/plugin login new-user -u admin2 -P a -l en -N "Admin"
+}
