@@ -1,4 +1,4 @@
-# OpenGrid Docs
+# openGrid Docs
 
 Built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material) and Docker
 
