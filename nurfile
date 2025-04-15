@@ -1,0 +1,11 @@
+def "nur install" [] {
+    npm install
+}
+
+def "nur update" [] {
+    npm install
+}
+
+def "nur run" [] {
+    npm run dev
+}
