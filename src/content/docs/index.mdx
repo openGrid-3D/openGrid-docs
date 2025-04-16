@@ -14,17 +14,21 @@ hero:
     #   link: https://starlight.astro.build
     #   icon: external
     #   variant: minimal
----
 
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/LogoHandsOnKatieWhite.webp';
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
 {/* ## Next steps */}
 
-{/* <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+<CardGrid stagger>
+	<Card title="Underware support">
+		Full [Underware 2.0](https://handsonkatie.com/underware-2-0-the-made-to-measure-collection/) support!
+
+		by <Image src={logo} alt="A rocketship in space" width={150} />
 	</Card>
-	<Card title="Add new content" icon="add-document">
+	{/* <Card title="Add new content" icon="add-document">
 		Add Markdown or MDX files to `src/content/docs` to create new pages.
 	</Card>
 	<Card title="Configure your site" icon="setting">
@@ -32,5 +36,5 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 	</Card>
 	<Card title="Read the docs" icon="open-book">
 		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid> */}
+	</Card> */}
+</CardGrid>

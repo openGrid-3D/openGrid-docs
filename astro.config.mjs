@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://opengrid-3d.github.io/openGrid-docs/',
-	base: 'openGrid-docs',
+	base: 'openGrid-docs/',
 	integrations: [
 		starlight({
 			title: 'openGrid',
@@ -14,13 +14,16 @@ export default defineConfig({
 				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Overview', slug: 'guides/overview' },
+						{ label: 'Board', slug: 'guides/board' },
+						{ label: 'Snaps', slug: 'guides/snaps' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Projects',
+					items: [
+						{ label: 'Underware', slug: 'projects/underware' },
+					],
 				},
 			],
 		}),
