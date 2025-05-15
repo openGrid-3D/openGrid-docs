@@ -23,6 +23,7 @@ export default defineConfig({
 					label: 'Projects',
 					items: [
 						{ label: 'Underware', slug: 'projects/underware' },
+						{ label: 'Gridfinity', slug: 'projects/gridfinity' },
 					],
 				},
 			],

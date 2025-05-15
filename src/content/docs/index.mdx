@@ -17,7 +17,7 @@ hero:
 
 ---
 import { Image } from 'astro:assets';
-import logo from '../../assets/LogoHandsOnKatieWhite.webp';
+import logoUnderware from '../../assets/LogoHandsOnKatieWhite.webp';
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
 {/* ## Next steps */}
@@ -28,7 +28,17 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 	<Card title="Underware support">
 		Full [Underware 2.0](https://handsonkatie.com/underware-2-0-the-made-to-measure-collection/) support!
 
-		by <Image src={logo} alt="A rocketship in space" width={150} />
+		by <Image src={logoUnderware} alt="A rocketship in space" width={150} />
+	</Card>
+	<Card title="Multiconnect support">
+		Full [Multiconnect](https://www.printables.com/model/1214361-opengrid-walldesk-mounting-framework-and-ecosystem/files) support!
+
+		Also created by DavidD, just like openGrid!
+	</Card>
+	<Card title="Gridfinity support">
+		Full [Gridfinity](https://gridfinity.xyz/) support!
+
+		by [Zack Freedman](https://www.youtube.com/c/ZackFreedman)
 	</Card>
 	{/* <Card title="Add new content" icon="add-document">
 		Add Markdown or MDX files to `src/content/docs` to create new pages.

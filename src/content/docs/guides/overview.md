@@ -1,11 +1,12 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: openGrid
+description: Open Source Board System created by DavidD
 ---
+ 
+openGrid is an open source board system created by DavidD.  
+It is intended to be a living-room compatible grid base with many options to attach things on to it. 
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+## Goals
 
-## Further reading
-
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+- living room compatible
+- use less filament than other common comparable frameworks
