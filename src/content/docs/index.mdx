@@ -1,15 +1,16 @@
 ---
-title: Welcome to openGrid
+title: openGrid
 description: Documentation for openGrid by DavidD.
 template: splash
 hero:
-  tagline: Happy printing!
+  tagline: A modular, remixable framework for walls, desks, and more.
   image:
     file: ../../assets/openGrid.webp
   actions:
-    - text: Getting Started
+    - text: Get Started
       link: ./guides/overview/
       icon: right-arrow
+    
     # - text: Read the Starlight docs
     #   link: https://starlight.astro.build
     #   icon: external
@@ -20,7 +21,47 @@ import { Image } from 'astro:assets';
 import logoUnderware from '../../assets/LogoHandsOnKatieWhite.webp';
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+## What is openGrid?
+
+**openGrid** is a general-purpose wall and desk mounting framework and ecosystem. It’s designed with a clear, opinionated structure that emphasizes:
+
+- **Ease of use**
+- **Visual simplicity**
+- **Modular extensibility**
+
+openGrid is built around a **28mm grid size**, making it **Gridfinity-compatible**, and integrates with systems like **Multiboard**, **HSW**, **GOEWS**, and standard **metric screws**. It also has first-class support for **Underware 2.0**.
+
+All base components are designed to look clean and modern — making them *living room compatible*. But the true power of openGrid comes from its flexibility: all modeling and source files are provided, making it easy to remix and extend.
+
+Whether you're a designer, maker, or hobbyist, openGrid is built to grow with your needs. Feedback and contributions are always welcome!
+
+## Why Choose openGrid?
+
+- **Designed for Modularity**: Combine and stack components as needed
+- **Easy to Customize**: Built in OpenSCAD with parametric flexibility
+- **Print-Ready**: Optimized for desktop 3D printers, including Bambu AMS support
+- **Looks Great Anywhere**: Clean lines and minimal style, made to blend in
+
 {/* ## Next steps */}
+
+## Common Use Cases
+
+- Tool wall organization
+- Under-desk cable routing
+- 3D printer accessory mounting
+- Modular workbench systems
+- Custom connector experiments
+
+## Getting Started
+
+openGrid is designed to be modular and easy to print. Here's how to begin:
+
+- Choose your tile type: `Full` or `Lite`
+- Set dimensions (e.g. 2×2 tiles)
+- Customize screw holes, chamfers, and connector slots
+- Export and print!
+
+👉 [Read the full getting started guide](./guides/overview/)
 
 {/* ## Projects */}
 
