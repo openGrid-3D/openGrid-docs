@@ -15,8 +15,8 @@ export default defineConfig({
 					label: 'Getting Started',
 					items: [
 						{ label: 'Overview', link: '/guides/overview/' },
-						{ label: 'Tile Parameters', link: '/guides/board/' },
-						{ label: 'Underware Integration', link: '/guides/snaps/' }
+						{ label: 'Board', link: '/guides/board/' },
+						{ label: 'Snaps', link: '/guides/snaps/' }
 					]
 				},
 				{
