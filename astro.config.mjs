@@ -12,12 +12,12 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/openGrid-3D/openGrid-docs' }],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Getting Started',
 					items: [
-						{ label: 'Overview', slug: 'guides/overview' },
-						{ label: 'Board', slug: 'guides/board' },
-						{ label: 'Snaps', slug: 'guides/snaps' },
-					],
+						{ label: 'Overview', link: '/guides/overview/' },
+						{ label: 'Tile Parameters', link: '/reference/parameters/' },
+						{ label: 'Underware Integration', link: '/guides/underware/' }
+					]
 				},
 				{
 					label: 'Projects',
