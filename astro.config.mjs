@@ -15,6 +15,7 @@ export default defineConfig({
 					label: 'Getting Started',
 					items: [
 						{ label: 'Overview', link: '/guides/overview/' },
+						{ label: 'Quickstart', link: '/guides/quickstart/' },
 						{ label: 'Board', link: '/guides/board/' },
 						{ label: 'Snaps', link: '/guides/snaps/' }
 					]

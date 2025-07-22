@@ -10,11 +10,6 @@ hero:
     - text: Get Started
       link: ./guides/overview/
       icon: right-arrow
-    
-    # - text: Read the Starlight docs
-    #   link: https://starlight.astro.build
-    #   icon: external
-    #   variant: minimal
 
 ---
 import { Image } from 'astro:assets';
@@ -42,8 +37,6 @@ Whether you're a designer, maker, or hobbyist, openGrid is built to grow with yo
 - **Print-Ready**: Optimized for desktop 3D printers, including Bambu AMS support
 - **Looks Great Anywhere**: Clean lines and minimal style, made to blend in
 
-{/* ## Next steps */}
-
 ## Common Use Cases
 
 - Tool wall organization
@@ -54,22 +47,16 @@ Whether you're a designer, maker, or hobbyist, openGrid is built to grow with yo
 
 ## Getting Started
 
-openGrid is designed to be modular and easy to print. Here's how to begin:
+openGrid is designed to be modular and easy to print.
 
-- Choose your tile type: `Full` or `Lite`
-- Set dimensions (e.g. 2×2 tiles)
-- Customize screw holes, chamfers, and connector slots
-- Export and print!
-
-👉 [Read the full getting started guide](./guides/overview/)
-
-{/* ## Projects */}
+👉 [Read the full getting started guide](./guides/overview/)  
+👉 [Read the quick start guide if you are in a hurry](./guides/quickstart/)
 
 <CardGrid stagger>
 	<Card title="Underware support">
 		Full [Underware 2.0](https://handsonkatie.com/underware-2-0-the-made-to-measure-collection/) support!
 
-		by <Image src={logoUnderware} alt="A rocketship in space" width={150} />
+		by <Image src={logoUnderware} alt="Underware" width={150} />
 	</Card>
 	<Card title="Multiconnect support">
 		Full [Multiconnect](https://www.printables.com/model/1214361-opengrid-walldesk-mounting-framework-and-ecosystem/files) support!
@@ -81,13 +68,4 @@ openGrid is designed to be modular and easy to print. Here's how to begin:
 
 		by [Zack Freedman](https://www.youtube.com/c/ZackFreedman)
 	</Card>
-	{/* <Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card> */}
 </CardGrid>
