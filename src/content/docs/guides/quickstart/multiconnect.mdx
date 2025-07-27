@@ -4,6 +4,8 @@ description: Adding wall based accessories using Multiconnect to openGrid fast.
 ---
 import { Image } from 'astro:assets';
 import multiconnectOverviewImage from '../../../../assets/multiconnect-overview.png';
+import multiconnectSingleSnapImage from '../../../../assets/multiconnect-single-snap.png';
+import multiconnectWithShelvesImage from '../../../../assets/multiconnect-with-shelves.png';
 
 ## Wall setup thoughts
 
@@ -27,8 +29,37 @@ is also suitable for other cases.
 <Image src={multiconnectOverviewImage} alt="Multiconnect heads and slots." />
 
 To attach something to your board using Multiconnect you basically just slide the accessory back over the
-Multiconnect heads attached to your board.
+Multiconnect heads attached to your board. The model itself must include the multiconnect channels for this,
+model authors can use the modeling files to easily create compatible models.
 
 ## Snaps 
 
-WIP....to be continued
+Multiconnect on openGrid by default is build using two separate parts you can then screw together:
+* The snap itself
+* The Multiconnect head
+
+Using those two parts allows you to combine different properties to get something that is best fit for
+your use case.
+
+For the sake of simplicity for this quickstart tutorial we will be using:
+* The normal Multiconnect Snap
+* The normal Multiconnect screw
+
+<Image src={multiconnectSingleSnapImage} alt="Multiconnect snap and screw." />
+
+You can then just push those into the openGrid tiles, they will be held in place by the board.
+
+## Adding the accessories
+
+For this quick intro we are using the Gridfinity shelves. There are many different models, but those
+are again easy to understand and print.
+
+After you have printed the models you may just slide those over the snaps. I recommend using at least one 
+Multiconnect on each of the top corners, but you may want to add as many as you like.
+
+<Image src={multiconnectWithShelvesImage} alt="Gridfinity shelves in Multiconnect snaps." />
+
+And basically thats it. openGrid has many different models you can choose from. If anything is missing the
+CAD files are provided as the base to create your own additions.
+
+Have fun printing and using openGrid!

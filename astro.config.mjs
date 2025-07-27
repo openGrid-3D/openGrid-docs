@@ -26,8 +26,11 @@ export default defineConfig({
 						{ label: 'Multiconnect', slug: 'projects/multiconnect' },
 						{ label: 'Underware', slug: 'projects/underware' },
 						{ label: 'Gridfinity', slug: 'projects/gridfinity' },
+						{ label: 'Deskware', slug: 'projects/deskware' },
+						{ label: 'NeoGrid', slug: 'projects/neogrid' },
 					],
 				},
+				{ label: 'Useful links', link: '/links' }
 			],
 		}),
 	],
