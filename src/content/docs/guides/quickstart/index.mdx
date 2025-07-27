@@ -1,0 +1,76 @@
+---
+title: openGrid Quickstart
+description: Getting openGrid onto your surface (wall/desk) fast.
+---
+import { Image } from 'astro:assets';
+import liteVsFullImage from '../../../../assets/opengrid-lite-vs-full.png';
+import openGridSizesImage from '../../../../assets/opengrid-sizes.png';
+import openGridConnectorImage from '../../../../assets/opengrid-connector.png';
+import openGridMountingImage from '../../../../assets/opengrid-mounting.png';
+import openGridMountedImage from '../../../../assets/opengrid-mounted-board.png';
+
+openGrid can be mounted up against your wall or under your desk or anywhere you want in just a bit. This
+guide is meant to help you get up and running as fast as possible.
+
+## Choosing the board version and size
+
+openGrid comes in two main versions:
+* The full board meant to be as generic as possible
+* The lite board for more lightweight applications
+
+<Image src={liteVsFullImage} alt="Lite vs. full board version." />
+
+Choosing the version is the first crucial step to get your board up and running. Normally I would suggest
+the lite board mainly for those use cases you have only little space or you won'T attach any heavy things
+onto your board (although even the lite version can handle some weight). The lite version also allows you
+to save some filament and time while printing.
+
+**If in doubt use the full version.**
+
+The next choice you will have to make is about the board size.
+
+<Image src={openGridSizesImage} alt="Different available sizes." />
+
+My recommendation would be to use the biggest size that fits your printer basically. Then measure how much
+space you have on your wall or under your desk and calculate how many of those boards you need. You may also
+add smaller boards on the edges to completely fill the available space.
+
+## Mounting your board
+
+Mounting depends a little bit on what board version you used. In general:
+
+* The **lite board already has screw holes included**, use those for mounting with some countersunk screws
+* The **full board** needs to be mounted using *+mounting snaps**, this will be described in the following
+
+<Image src={openGridMountingImage} alt="Mounting snaps are used to attach the board to your wall." />
+
+Using the mounting snaps in general is pretty easy. Just snap those into your board and use a countersunk
+screw to attach it firmly to your wall or similar.
+
+## Connecting your board
+
+You may want to use connectors to align your boards. Those will also ensure you can mount the whole board as
+one piece. My suggestion would be to print a connector for each hole, then snap the boards together.
+
+<Image src={openGridConnectorImage} alt="Connectors need to be pushed into the hole son the side of the board." />
+
+## Repeat until you have the full board mounted
+
+You may add additional connectors while the first boards are already mounted to yoour wall or any other surface - or
+connect multiple boards and then mount those as one piece. Both works fine.
+
+Normally you use a mounting snap on each corner of your used boards. But you may also skip most of the mounting
+snaps if you are using the normal connector on each slot. You may still add additional mounting snaps later if
+necessary, as those can just be added from the front.
+
+<Image src={openGridMountedImage} alt="Board with mounting snaps on each corner." />
+
+## Accessories
+
+When you have completely mounted your boards it is time to add some accessories. Which accessories are
+best suited depends on your setup and use use. The quickstart will continue with two variants:
+
+* For wall mounted setups [add Multiconnect based Gridfinity shelves](./multiconnect/)
+* For under desk setups [add Underware channels](./underware/)
+
+For a generic overview of accessories continue to the [accessories page](../accessories/).

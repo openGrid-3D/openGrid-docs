@@ -14,15 +14,16 @@ export default defineConfig({
 				{
 					label: 'Getting Started',
 					items: [
-						{ label: 'Overview', link: '/guides/overview/' },
+						{ label: 'Overview', link: '/guides/' },
 						{ label: 'Quickstart', link: '/guides/quickstart/' },
-						{ label: 'Board', link: '/guides/board/' },
-						{ label: 'Snaps', link: '/guides/snaps/' }
+						{ label: 'Board', link: '/guides/board' },
+						{ label: 'Snaps', link: '/guides/snaps' }
 					]
 				},
 				{
 					label: 'Projects',
 					items: [
+						{ label: 'Multiconnect', slug: 'projects/multiconnect' },
 						{ label: 'Underware', slug: 'projects/underware' },
 						{ label: 'Gridfinity', slug: 'projects/gridfinity' },
 					],
