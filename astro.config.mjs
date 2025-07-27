@@ -21,7 +21,7 @@ export default defineConfig({
 					]
 				},
 				{
-					label: 'Projects',
+					label: 'Compatible projects',
 					items: [
 						{ label: 'Multiconnect', slug: 'projects/multiconnect' },
 						{ label: 'Underware', slug: 'projects/underware' },
