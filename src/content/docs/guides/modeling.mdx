@@ -1,0 +1,54 @@
+---
+title: openGrid modeling
+description: Some hints about using the provided modeling files
+---
+import { Image } from 'astro:assets';
+import opengridBaseSnapsImage from '../../../assets/opengrid-bare-snaps.png';
+import multiconnectModelingImage from '../../../assets/multiconnect-modeling.png';
+
+openGrid tried to provide as much as possible to support you creating your own models. May those
+be based on the snap layout, the board itself or just using the dimensional docs to support your
+own creating. This page tries to collect some basic tips about modeling for openGrid.
+
+## The opengrid goals
+
+When you create your own models I would kindly ask you to follow those generic guidelines. This ensures
+the openGrid system won't fragment and keeps on flourishing.
+
+* Provide source or STEP files for others to remix, modify and extend.
+* Keep the license open.
+* Follow a minimalisic design, use as little parts as possible.
+* Try to keep things compatible to living room situations.  
+  (You may of couse skip this for your workbench tool holder 😎)
+* Adhere to the board base dimensions, don't change those.
+
+## Creating your own snaps
+
+<Image src={opengridBaseSnapsImage} alt="Different bare snaps." />
+
+openGrid provides a wide range of sifferent snap types. The ones shown here are only meant to be
+used for modeling, creating your own snaps. The snaps itself provide no features besides being
+compatible with openGrid itself. So you may punch holes into those, use threads of anything you like.
+
+The different snaps:
+* The **normal snap** can be pushed onto the board and will be held in places there lightly.
+* The **directional snaps** need to be pushed in at one side and then swiveled into the board. There is
+  an arrow on the snap's back to show you which part needs to go in first. Those snaps can hold some weight
+  when used in the correct orientation.
+* The **lock snap (BETA)** is a snap that can be pushed in normally and then be twisted to lock the side
+  snaps into place. It then can also hold some weight, but without any directional restrictions.
+  
+Use the bare snap that fits your need the best.
+
+## Use Multiconnect
+
+<Image src={multiconnectModelingImage} alt="Multiconnect modeling files." />
+
+Multiconnect is a very generic system to attach things to your board. With Multiconnect again there are
+various modeling files. You may use those to create your own models based on the provided back channels
+as well as using the negatived to cut such a channel to any existing model.
+
+## Download the models
+
+* [openGrid on printables](https://www.printables.com/model/1214361-opengrid-walldesk-mounting-framework-and-ecosystem)
+* [openGrid on makerworld](https://makerworld.com/en/models/1179191-opengrid-wall-desk-mounting-framework-ecosystem)
