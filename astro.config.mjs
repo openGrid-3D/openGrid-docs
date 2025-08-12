@@ -19,6 +19,7 @@ export default defineConfig({
 						{ label: 'Board', link: '/guides/board' },
 						{ label: 'Snaps', link: '/guides/snaps' },
 						{ label: 'Printing instructions', link: '/guides/printing' },
+						{ label: 'Modeling', link: '/guides/modeling' },
 					]
 				},
 				{
