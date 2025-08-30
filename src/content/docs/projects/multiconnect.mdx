@@ -5,19 +5,104 @@ description: Multiconnect is the default interface for attaching things.
 import { Image } from 'astro:assets';
 import multiconnectSnapsImage from '../../../assets/multiconnect-snaps.png';
 
-WIP, please come back later.
+Multiconnect is openGrid's universal connection system that allows you to attach accessories and integrate with existing modular wall systems. It serves as a bridge between different organizational systems, letting you reuse accessories across multiple platforms while maintaining compatibility with your current setup.
+
+## Quick Start
+
+### Prerequisites
+- Printed openGrid board
+- 3D printer for multiconnect snaps
+- Basic understanding of modular wall systems
+
+### Setup
+1. Download the multiconnect snap designs from [Printables](https://www.printables.com/@DavidD/collections/2174464) or [Makerworld](https://makerworld.com/en/collections/5283101-opengrid)
+2. Print the desired snap type using standard 3D printer settings
+3. Identify your target system (Multiboard, HSW, GOEWS, or metric screws)
+
+### Basic Usage
+```bash
+# Print multiconnect snaps
+1. Select snap type based on your system
+2. Print using PLA/PETG with 0.2mm layer height
+3. Insert snap into openGrid board
+4. Attach your accessories or components
+```
+
+### Verification
+- Snap should fit snugly in openGrid holes
+- Connection should hold weight appropriate for your use case
+- Directional snaps should engage with audible click
+
+### Next Steps
+- Explore compatibility with other systems
+- Consider M6 screw version for heavy-duty applications
+- Browse the full [openGrid underware collection](../underware/)
+
+### Common Issues
+- **Snap too loose**: Check printer calibration and hole tolerance
+- **Directional snap won't engage**: Ensure correct insertion angle
+- **Heavy items falling**: Use M6 screw version or multiple connection points
+
+## System Compatibility
+
+Multiconnect supports integration with several popular modular systems:
+
+- **Multiboard**: Full tile compatibility with single-column applications
+- **Honeycomb Storage Wall (HSW)**: Compatible but slightly thicker profile
+- **GOEWS**: Uses GridFinity-compatible dimensions
+- **Metric Screws**: M3, M4, M5, and M6 screw support
+- **GridFinity**: Two GridFinity boxes equal three openGrid tiles
 
 ### Multiconnect snaps
 
-As said before all Multiconnect snaps have a thread hole in the middle to allow 
+All Multiconnect snaps feature a threaded hole in the center to allow for secure mounting and easy removal. The snap system is designed to work seamlessly across different modular wall systems while maintaining the strength and reliability needed for everyday use.
 
 <Image src={multiconnectSnapsImage} alt="Different snap variants for multiconnect." />
 
-TODO: Describe those
+The snap variants include:
+- **Standard snap**: Universal connection for most applications
+- **Directional snap**: Angled insertion for secure hold on systems like GOEWS and metric screws
+- **Full tile snap**: Complete multiboard tile integration
+- **Midsize screw snap**: Medium-duty applications
+- **Small screw snap**: Light-duty and compact installations
 
 ### Multiconnect screws
 
-TODO: Create image  
-TODO: Describe different screws
+The screw-based multiconnect system provides the strongest connection method, especially suitable for heavy items or permanent installations. This system includes several mounting options:
 
-TODO: Describe lite version
+**M3 Hex Nut Integration**
+- Push M3 hex nut into the back of directional snap
+- Secure items using standard M3 screws
+- Tested to hold 3-4 kilograms safely
+- Metal reinforcement provides superior strength over plastic connections
+
+**M6 Screw Board Version**
+- Alternative openGrid board design with M6 threaded holes
+- Direct screw mounting without separate snaps
+- Compatible with standard nozzles and M6 hardware
+- Strongest connection method available
+
+**Heat Insert Compatibility**
+- M6 holes accommodate M5 or M4 heat inserts
+- Provides threaded connection for repeated use
+- Requires appropriate heat insert length for board thickness
+- Creates professional-grade mounting solution
+
+### Multiconnect Lite Version
+
+The lite version offers a simplified multiconnect experience for basic applications where full system compatibility isn't required. This streamlined approach focuses on core functionality while reducing print time and material usage.
+
+Key features of the lite version:
+- Reduced material requirements
+- Faster printing times  
+- Essential connection functionality
+- Perfect for prototyping and light-duty applications
+- Maintains core multiconnect compatibility
+
+## Integration Examples
+
+**Single Column Applications**: Work perfectly across all systems since they use only one multiconnect attachment point, making them easily transferable between different boards.
+
+**Multi-tile Applications**: May require spacing adjustments due to different grid sizes (25mm vs 28mm spacing), but single-tile accessories remain fully compatible.
+
+**Heavy-Duty Mounting**: Use the M6 screw board version or metal screw integration for items requiring maximum holding strength and security.
