@@ -1,54 +1,104 @@
-# Starlight Starter Kit: Basics
+# openGrid-docs
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Welcome to the documentation hub for **openGrid** — a general-purpose, open-source wall and desk mounting framework and ecosystem. This project is designed to make organizing your space (workshop, desk, living room, or maker area) easy, visually clean, and highly modular.
 
-```
-npm create astro@latest -- --template starlight
-```
+[Project Homepage](https://www.opengrid.world/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## What is openGrid?
 
-## 🚀 Project Structure
+**openGrid** is a living-room compatible mounting system built around a 28mm grid, fully compatible with **Gridfinity**, **Multiboard**, **HSW**, **GOEWS**, and standard metric screws. It provides a modern, minimalistic aesthetic, supporting both robust tool wall setups and elegant cable management solutions.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+- **Ease of Use**: Simple to assemble and adapt to your needs.
+- **Visual Simplicity**: Clean lines, minimal style, and clutter-free looks.
+- **Modular Extensibility**: Add, swap, or remix components easily.
+- **Open Ecosystem**: All modeling and source files available for remixing and extension.
+
+Whether you're a designer, maker, or hobbyist, openGrid is built to grow with your needs. Contributions and feedback are always welcome!
+
+---
+
+## Project Goals
+
+- **Living room compatibility**: Looks great in any space.
+- **Minimal parts**: Easy to explain, print, and assemble.
+- **Material efficiency**: Uses less filament than comparable systems.
+- **Compatibility**: Works with Gridfinity and other common solutions.
+- **Open Design**: Licensed under [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/) — remix and share!
+
+---
+
+## Common Use Cases
+
+- Tool wall organization
+- Under-desk cable routing (with Underware)
+- 3D printer accessory mounting
+- Modular workbench systems
+- Custom connector and snap experiments
+
+---
+
+## Why Choose openGrid?
+
+- **Modular**: Combine and stack components as needed
+- **Customizable**: Designed in OpenSCAD for parametric flexibility
+- **Print-ready**: Optimized for desktop 3D printers, including Bambu AMS support
+- **Blends in**: Modern, minimal style made to fit anywhere
+
+---
+
+## Getting Started
+
+- **[Quickstart Guide](src/content/docs/guides/quickstart/)**: Dive in and start printing and assembling openGrid components.
+- **[Full Guides](src/content/docs/guides/)**: Learn about boards, snaps, modeling your own parts, and more.
+
+---
+
+## Project Structure
+
+Your openGrid-docs project is organized as follows:
 
 ```
 .
-├── public/
+├── public/                   # Static assets
 ├── src/
-│   ├── assets/
+│   ├── assets/               # Images and media
 │   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+│   │   └── docs/             # Documentation (.md, .mdx)
+│   └── content.config.ts     # Content configuration
+├── astro.config.mjs          # Astro site configuration
+├── package.json              # Project metadata and scripts
+└── tsconfig.json             # TypeScript config
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+- Documentation lives in `src/content/docs/`.
+- Images/assets go in `src/assets/`.
+- Static assets (favicons, etc.) go in `public/`.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+---
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## Contributing
 
-## 🧞 Commands
+- All modeling and source files are provided for remixing and extending the system.
+- Please follow the openGrid design goals when creating new models.
+- Contributions, bug reports, and feedback are welcome!
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## License
 
-## 👀 Want to learn more?
+Content is released under the [Creative Commons Attribution 4.0 License (CC-BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+---
+
+## Useful Links
+
+- [openGrid on Printables](https://www.printables.com/model/1214361-opengrid-walldesk-mounting-framework-and-ecosystem)
+- [openGrid on MakerWorld](https://makerworld.com/en/models/1179191-opengrid-wall-desk-mounting-framework-ecosystem)
+- [Underware Cable Management](https://www.printables.com/model/1214427-underware-for-opengrid-manage-your-cables-lite-ly)
+- [openGrid Tile Generator](https://gridfinity.perplexinglabs.com/pr/opengrid/0/0)
+
+---
+
+Have fun printing and using openGrid!
