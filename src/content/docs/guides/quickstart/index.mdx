@@ -1,5 +1,5 @@
 ---
-title: openGrid Quickstart
+title: Quickstart
 description: Getting openGrid onto your surface (wall/desk) fast.
 ---
 import { Image } from 'astro:assets';
@@ -9,31 +9,39 @@ import openGridConnectorImage from '../../../../assets/opengrid-connector.png';
 import openGridMountingImage from '../../../../assets/opengrid-mounting.jpg';
 import openGridMountedImage from '../../../../assets/opengrid-mounted-board.jpg';
 
-openGrid can be mounted up against your wall or under your desk or anywhere you want in just a bit. This
+openGrid can be mounted to your wall, under your desk, or anywhere you want really! This
 guide is meant to help you get up and running as fast as possible.
 
-## Choosing the board version and size
+## Choosing the Board Version and Size
 
-openGrid comes in two main versions:
-* The full board meant to be as generic as possible
-* The lite board for more lightweight applications
+### Board Versions
+openGrid comes in two flavors: the **Full** version, and the **Lite** version:
 
-<Image src={liteVsFullImage} alt="Lite vs. full board version." />
+<Image src={liteVsFullImage} alt="Lite vs. Full board versions" />
 
-Choosing the version is the first crucial step to get your board up and running. Normally I would suggest
-the lite board mainly for those use cases you have only little space or you won'T attach any heavy things
-onto your board (although even the lite version can handle some weight). The lite version also allows you
-to save some filament and time while printing.
+Both provide the same 28mm spacing, but the Lite version saves on filament and print time, albeit with reduced loadbearing capacity. The choice will come down to your particular use case(s), so the recommendation is to print both and test them out!
 
-**If in doubt use the full version.**
+If you still have doubts after testing, the safest bet is to use the **Full** version.
 
-The next choice you will have to make is about the board size.
+### Board Size
 
-<Image src={openGridSizesImage} alt="Different available sizes." />
+<Image src={openGridSizesImage} alt="Different board sizes" />
+
+Boards can range from small 4x4 grids, to mammoth 10x10+ boards.
 
 My recommendation would be to use the biggest size that fits your printer basically. Then measure how much
 space you have on your wall or under your desk and calculate how many of those boards you need. You may also
 add smaller boards on the edges to completely fill the available space.
+
+Most printers should be able to fit a 6x6 board version. So if unsure maybe try to start there.
+
+The board can be downloaded from sifferent sources:
+* [openGrid on printables](https://www.printables.com/model/1214361-opengrid-walldesk-mounting-framework-and-ecosystem)
+* [openGrid on makerworld](https://makerworld.com/en/models/1179191-opengrid-wall-desk-mounting-framework-ecosystem)
+
+If you want to generate a board with your custom size (and features) you may want to use the generators:
+* [openGrid tile generator on makerworld](https://makerworld.com/en/models/1304337-opengrid-tile-generator)
+* [openGrid tile generator on perplexinglabs](https://gridfinity.perplexinglabs.com/pr/opengrid/0/0)
 
 ## Mounting your board
 
@@ -49,6 +57,10 @@ Mounting depends a little bit on what board version you used. In general:
 
 Using the mounting snaps in general is pretty easy. Just snap those into your board and use a countersunk
 screw to attach it firmly to your wall or similar.
+
+There are other mounting options available through community models:
+* [openGrid mounts on printables](https://www.printables.com/search/models?q=tag:opengrid+mount)
+* [openGrid mounts on makerworld](https://makerworld.com/en/search/models?keyword=opengrid+mount)
 
 ## Connecting your board
 
