@@ -4,8 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://frenchiveruti.github.io/openGrid-docs/',
-	base: '/openGrid-docs',
+    site: 'https://www.opengrid.world',
+	base: '/',
 	integrations: [
 		starlight({
 			title: 'openGrid',
