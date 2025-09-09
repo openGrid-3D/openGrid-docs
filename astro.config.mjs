@@ -18,6 +18,7 @@ export default defineConfig({
 						{ label: 'Quickstart', link: '/guides/quickstart/' },
 						{ label: 'Board', link: '/guides/board' },
 						{ label: 'Snaps', link: '/guides/snaps' },
+						{ label: 'Accessories', link: '/guides/accessories' },
 						{ label: 'Printing instructions', link: '/guides/printing' },
 						{ label: 'Modeling', link: '/guides/modeling' },
 					]
