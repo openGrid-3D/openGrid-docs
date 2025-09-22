@@ -33,6 +33,17 @@ export default defineConfig({
 						{ label: 'NeoGrid', slug: 'projects/neogrid' },
 					],
 				},
+				{
+					label: 'Resources',
+					items: [
+						{ label: 'FAQ', link: '/faq' },
+						{ label: 'Troubleshooting', link: '/troubleshooting' },
+						{ label: 'Compatibility', link: '/compatibility' },
+						{ label: 'Videos', link: '/videos' },
+						{ label: 'Community', link: '/community' },
+						{ label: 'Maintenance', link: '/maintenance' },
+					],
+				},
 				{ label: 'Useful links', link: '/links' }
 			],
 		}),
