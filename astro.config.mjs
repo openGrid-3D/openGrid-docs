@@ -26,12 +26,12 @@ export default defineConfig({
 				{
 					label: 'Compatible projects',
 					items: [
-						{ label: 'Multiconnect', slug: 'projects/multiconnect' },
-						{ label: 'Underware', slug: 'projects/underware' },
-						{ label: 'Gridfinity', slug: 'projects/gridfinity' },
-						{ label: 'Deskware', slug: 'projects/deskware' },
-						{ label: 'NeoGrid', slug: 'projects/neogrid' },
-						{ label: 'TinyRack', slug: 'projects/tinyrack' },
+						{ label: 'Multiconnect', link: '/projects/multiconnect' },
+						{ label: 'Underware', link: '/projects/underware' },
+						{ label: 'Gridfinity', link: '/projects/gridfinity' },
+						{ label: 'Deskware', link: '/projects/deskware' },
+						{ label: 'NeoGrid', link: '/projects/neogrid' },
+						{ label: 'TinyRack', link: '/projects/tinyrack' },
 					],
 				},
 				{ label: 'Useful links', link: '/links' }
