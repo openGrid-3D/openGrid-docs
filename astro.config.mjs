@@ -31,6 +31,7 @@ export default defineConfig({
 						{ label: 'Gridfinity', slug: 'projects/gridfinity' },
 						{ label: 'Deskware', slug: 'projects/deskware' },
 						{ label: 'NeoGrid', slug: 'projects/neogrid' },
+						{ label: 'TinyRack', slug: 'projects/tinyrack' },
 					],
 				},
 				{ label: 'Useful links', link: '/links' }
