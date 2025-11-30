@@ -9,3 +9,7 @@ def "nur update" [] {
 def "nur run" [] {
     npm run dev
 }
+
+def "nur upgrade" [] {
+    npx @astrojs/upgrade
+}
